@@ -1,6 +1,6 @@
 Revision history for Perl extension NetAddr::IP::Find.
 
-0.02
+0.02  Fri Oct  5 01:21:25 JST 2001
 	- renamed to NetAddr::IP::Find
 
 0.01  Mon Jul  9 20:04:14 2001
