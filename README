@@ -1,8 +1,8 @@
 NAME
-    Net::IPAddr::Find - Find IP addresses in plain text
+    NetAddr::IP::Find - Find IP addresses in plain text
 
 SYNOPSIS
-      use Net::IPAddr::Find;
+      use NetAddr::IP::Find;
       $num_found = find_ipaddrs($text, \&callback);
 
 DESCRIPTION
@@ -10,7 +10,7 @@ DESCRIPTION
 
   Functions
 
-    Net::IPAddr::Find exports one function, find_ipaddrs(). It works very
+    NetAddr::IP::Find exports one function, find_ipaddrs(). It works very
     similar to URI::Find's find_uris() or Email::Find's find_emails().
 
       $num_ipaddrs_found = find_ipaddrs($text, \&callback);
