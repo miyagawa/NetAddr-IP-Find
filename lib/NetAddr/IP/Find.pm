@@ -2,7 +2,7 @@ package NetAddr::IP::Find;
 
 use strict;
 use vars qw($VERSION @EXPORT);
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 use base qw(Exporter);
 @EXPORT = qw(find_ipaddrs);
@@ -17,7 +17,7 @@ sub find_ipaddrs (\$&) {
 
     $$r_text =~ s{$regex}{
 	my $orig_match = join '.', $1, $2, $3, $4;
-	if (grep { _in_range($_) } $1, $2, $3, $4 == 4) {
+	if ((my $num_matches = grep { _in_range($_) } $1, $2, $3, $4) == 4) {
 	    $addrs_found++;
 	    my $ipaddr = NetAddr::IP->new($orig_match);
 	    $callback->($ipaddr, $orig_match);
